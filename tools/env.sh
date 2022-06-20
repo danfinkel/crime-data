@@ -4,4 +4,4 @@ project_dir=$(cd -P $tools_dir/.. && $MYPWD)
 
 export CRIME=$project_dir
 
-alias crime = cd $CRIME
+alias crime="cd $CRIME"
