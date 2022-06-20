@@ -1,0 +1,51 @@
+2022-06-20 12:26:38.989 EDT [2514] LOG:  starting PostgreSQL 14.3 on x86_64-apple-darwin21.5.0, compiled by Apple clang version 13.1.6 (clang-1316.0.21.2.5), 64-bit
+2022-06-20 12:26:38.990 EDT [2514] LOG:  listening on IPv6 address "::1", port 5432
+2022-06-20 12:26:38.990 EDT [2514] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-06-20 12:26:38.991 EDT [2514] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-06-20 12:26:38.994 EDT [2515] LOG:  database system was shut down at 2022-06-20 12:26:29 EDT
+2022-06-20 12:26:38.997 EDT [2514] LOG:  database system is ready to accept connections
+2022-06-20 12:27:37.299 EDT [2815] FATAL:  lock file "postmaster.pid" already exists
+2022-06-20 12:27:37.299 EDT [2815] HINT:  Is another postmaster (PID 2514) running in data directory "/Users/danfinkel/.postgres"?
+2022-06-20 12:30:23.053 EDT [2924] FATAL:  database "danfinkel" does not exist
+2022-06-20 12:30:47.542 EDT [2962] FATAL:  role "postgres" does not exist
+2022-06-20 12:33:43.189 EDT [3092] FATAL:  database "danfinkel" does not exist
+2022-06-20 12:37:39.133 EDT [2520] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2022-06-20 12:37:39.843 EDT [2520] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2022-06-20 12:37:39.843 EDT [2520] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2022-06-20 12:37:40.520 EDT [2520] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2022-06-20 12:37:40.520 EDT [2520] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2022-06-20 12:37:41.203 EDT [2520] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2022-06-20 12:37:41.203 EDT [2520] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2022-06-20 12:37:41.900 EDT [2520] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2022-06-20 12:37:41.900 EDT [2520] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2022-06-20 12:37:42.586 EDT [2520] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2022-06-20 12:37:42.586 EDT [2520] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2022-06-20 12:37:43.199 EDT [2514] LOG:  could not open file "postmaster.pid": No such file or directory
+2022-06-20 12:37:43.199 EDT [2514] LOG:  performing immediate shutdown because data directory lock file is invalid
+2022-06-20 12:37:43.199 EDT [2514] LOG:  received immediate shutdown request
+2022-06-20 12:37:43.199 EDT [2514] LOG:  could not open file "postmaster.pid": No such file or directory
+2022-06-20 12:37:43.200 EDT [2520] LOG:  could not open temporary statistics file "pg_stat/global.tmp": No such file or directory
+2022-06-20 12:37:43.205 EDT [2514] LOG:  database system is shut down
+2022-06-20 12:37:53.876 EDT [3429] LOG:  starting PostgreSQL 14.3 on x86_64-apple-darwin21.5.0, compiled by Apple clang version 13.1.6 (clang-1316.0.21.2.5), 64-bit
+2022-06-20 12:37:53.877 EDT [3429] LOG:  listening on IPv6 address "::1", port 5432
+2022-06-20 12:37:53.877 EDT [3429] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-06-20 12:37:53.878 EDT [3429] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-06-20 12:37:53.881 EDT [3430] LOG:  database system was shut down at 2022-06-20 12:37:42 EDT
+2022-06-20 12:37:53.883 EDT [3429] LOG:  database system is ready to accept connections
+2022-06-20 12:40:15.361 EDT [3429] LOG:  received smart shutdown request
+2022-06-20 12:40:15.363 EDT [3429] LOG:  background worker "logical replication launcher" (PID 3436) exited with exit code 1
+2022-06-20 12:40:15.363 EDT [3431] LOG:  shutting down
+2022-06-20 12:40:15.371 EDT [3429] LOG:  database system is shut down
+2022-06-20 12:42:57.649 EDT [3746] LOG:  starting PostgreSQL 14.3 on x86_64-apple-darwin21.5.0, compiled by Apple clang version 13.1.6 (clang-1316.0.21.2.5), 64-bit
+2022-06-20 12:42:57.651 EDT [3746] LOG:  listening on IPv6 address "::1", port 5432
+2022-06-20 12:42:57.651 EDT [3746] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-06-20 12:42:57.651 EDT [3746] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-06-20 12:42:57.654 EDT [3747] LOG:  database system was shut down at 2022-06-20 12:42:50 EDT
+2022-06-20 12:42:57.657 EDT [3746] LOG:  database system is ready to accept connections
+2022-06-20 12:43:06.491 EDT [3790] FATAL:  database "danfinkel" does not exist
+2022-06-20 12:44:59.409 EDT [3905] FATAL:  role "postgres" does not exist
+2022-06-20 12:45:14.085 EDT [3942] FATAL:  database "danfinkel" does not exist
+2022-06-20 12:45:43.338 EDT [3983] FATAL:  role "postgres" does not exist
+2022-06-20 14:31:11.061 EDT [4091] FATAL:  role "crimeuser" is not permitted to log in
+2022-06-20 14:42:11.829 EDT [4107] ERROR:  permission denied to drop role
+2022-06-20 14:42:11.829 EDT [4107] STATEMENT:  drop user crimeuser
