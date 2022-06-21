@@ -77,3 +77,39 @@
 2022-06-20 17:55:21.816 EDT [4946] STATEMENT:  CREATE schema nibrs
 2022-06-20 17:55:35.431 EDT [4949] ERROR:  database "crime_project" already exists
 2022-06-20 17:55:35.431 EDT [4949] STATEMENT:  CREATE database crime_project
+2022-06-20 21:40:05.486 EDT [6054] ERROR:  relation "nibrs.admin" does not exist at character 15
+2022-06-20 21:40:05.486 EDT [6054] STATEMENT:  select * from nibrs.admin limit 10;
+2022-06-20 21:41:54.814 EDT [6098] ERROR:  relation "nibrs.admin" does not exist at character 15
+2022-06-20 21:41:54.814 EDT [6098] STATEMENT:  select * from nibrs.admin limit 10;
+2022-06-20 21:46:39.577 EDT [6098] ERROR:  relation "public.admin" does not exist at character 15
+2022-06-20 21:46:39.577 EDT [6098] STATEMENT:  select * from public.admin limit 10;
+2022-06-20 21:49:22.259 EDT [6098] ERROR:  relation "nibrs.admin" does not exist at character 15
+2022-06-20 21:49:22.259 EDT [6098] STATEMENT:  select * from nibrs.admin limit 10;
+2022-06-20 21:49:32.446 EDT [6098] ERROR:  relation "nibrs.admin" does not exist at character 15
+2022-06-20 21:49:32.446 EDT [6098] STATEMENT:  select * from nibrs.admin limit 10;
+2022-06-20 21:49:59.746 EDT [6098] ERROR:  cross-database references are not implemented: "public.nibrs.admin"
+2022-06-20 21:49:59.746 EDT [6098] STATEMENT:  drop table public.nibrs.admin;
+2022-06-20 21:50:06.308 EDT [6098] ERROR:  cross-database references are not implemented: "public.nibrs.admin"
+2022-06-20 21:50:06.308 EDT [6098] STATEMENT:  drop table public.nibrs.admin;
+2022-06-20 22:13:56.644 EDT [5935] ERROR:  schema "crime_project" does not exist at character 15
+2022-06-20 22:13:56.644 EDT [5935] STATEMENT:  
+	CREATE TABLE crime_project.admin (
+		ori TEXT, 
+		year SMALLINT, 
+		state TEXT, 
+		state_abb TEXT, 
+		incident_number TEXT, 
+		incident_date TEXT, 
+		report_date_indicator TEXT, 
+		incident_date_hour TEXT, 
+		total_offense_segments SMALLINT, 
+		total_victim_segments SMALLINT, 
+		total_offender_segments SMALLINT, 
+		total_arrestee_segments SMALLINT, 
+		city_submissions FLOAT(53), 
+		cleared_exceptionally TEXT, 
+		exceptional_clearance_date TEXT, 
+		unique_incident_id TEXT
+	)
+	
+	

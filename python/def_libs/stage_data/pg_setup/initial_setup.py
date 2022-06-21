@@ -1,21 +1,10 @@
 import psycopg2
+from util import default_cxn, crimeuser_cxn
 
 class db_setup():
     def __init__(self):
-
-        self.DEFAULT_CXN = {'db': 'postgres',
-                            'user': 'danfinkel',
-                            'password': 'password',
-                            'host': '127.0.0.1',
-                            'port': '5432'
-                           }
-
-        self.CRIMEUSER_CXN = {'db': 'crime_project',
-                         'user': 'crimeuser',
-                         'password': 'password',
-                         'host': '127.0.0.1',
-                         'port': '5432'
-                      }
+        self.DEFAULT_CXN = default_cxn()
+        self.CRIMEUSER_CXN = crimeuser_cxn()
 
 
     def submit_sql(cxn, sql):
@@ -54,7 +43,7 @@ class db_setup():
         sql = '''CREATE role {crimeuser} LOGIN password '{password}' '''.format(crimeuser=CRIMEUSER_CXN['user'],
                                                                                 password=CRIMEUSER_CXN['password']
                                                                                )
-        submit_sql(DEFAULT_CXN,sql)
+        submit_sql(self.DEFAULT_CXN,sql)
 
 
     def create_crimedb():
@@ -63,11 +52,11 @@ class db_setup():
         """
 
         sql = '''CREATE database {crime_project}'''.format(crime_project=CRIMEUSER_CXN['db'])
-        submit_sql(DEFAULT_CXN,sql)
+        submit_sql(self.DEFAULT_CXN,sql)
 
         sql = '''GRANT ALL PRIVILEGES ON DATABASE {crime_project} TO {user};'''.format(crime_project=CRIMEUSER_CXN['db'],
                                                                                        user=CRIMEUSER_CXN['user'])
-        submit_sql(DEFAULT_CXN,sql)
+        submit_sql(self.DEFAULT_CXN,sql)
 
 
     def create_schema(schema_name):
@@ -75,7 +64,7 @@ class db_setup():
         """
 
         sql = '''CREATE schema {schema_name}'''.format(schema_name=schema_name)
-        submit_sql(CRIMEUSER_CXN, sql)
+        submit_sql(self.CRIMEUSER_CXN, sql)
 
 
     def drop_db():
@@ -84,7 +73,7 @@ class db_setup():
         """
 
         sql = '''DROP database {crime_project} WITH (FORCE)'''.format(crime_project=CRIMEUSER_CXN['db'])
-        submit_sql(DEFAULT_CXN,sql)
+        submit_sql(self.DEFAULT_CXN,sql)
 
     def run():
 
