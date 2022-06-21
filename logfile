@@ -49,3 +49,31 @@
 2022-06-20 14:31:11.061 EDT [4091] FATAL:  role "crimeuser" is not permitted to log in
 2022-06-20 14:42:11.829 EDT [4107] ERROR:  permission denied to drop role
 2022-06-20 14:42:11.829 EDT [4107] STATEMENT:  drop user crimeuser
+2022-06-20 17:32:59.240 EDT [4752] ERROR:  permission denied for database crime_project
+2022-06-20 17:32:59.240 EDT [4752] STATEMENT:  CREATE schema nibrs
+2022-06-20 17:34:39.483 EDT [4774] ERROR:  permission denied for database crime_project
+2022-06-20 17:34:39.483 EDT [4774] STATEMENT:  CREATE schema nibrs
+2022-06-20 17:36:45.009 EDT [4784] ERROR:  permission denied for database crime_project
+2022-06-20 17:36:45.009 EDT [4784] STATEMENT:  CREATE schema nibrs
+2022-06-20 17:41:03.712 EDT [4812] ERROR:  database "crime_project" is being accessed by other users
+2022-06-20 17:41:03.712 EDT [4812] DETAIL:  There is 1 other session using the database.
+2022-06-20 17:41:03.712 EDT [4812] STATEMENT:  DROP database crime_project
+2022-06-20 17:43:05.930 EDT [4784] FATAL:  terminating connection due to administrator command
+2022-06-20 17:43:28.164 EDT [4864] ERROR:  database "crime_project" is being accessed by other users
+2022-06-20 17:43:28.164 EDT [4864] DETAIL:  There is 1 other session using the database.
+2022-06-20 17:43:28.164 EDT [4864] STATEMENT:  DROP database crime_project
+2022-06-20 17:46:07.904 EDT [4863] FATAL:  terminating connection due to administrator command
+2022-06-20 17:46:20.535 EDT [4892] ERROR:  syntax error at or near "sql" at character 1
+2022-06-20 17:46:20.535 EDT [4892] STATEMENT:  sql = 'GRANT CREATE ON DATABASE db TO user;
+2022-06-20 17:47:53.964 EDT [4904] ERROR:  syntax error at or near "sql" at character 1
+2022-06-20 17:47:53.964 EDT [4904] STATEMENT:  sql = 'GRANT CREATE ON DATABASE crime_project TO crimeuser;
+2022-06-20 17:51:18.864 EDT [4915] ERROR:  syntax error at or near "sql" at character 1
+2022-06-20 17:51:18.864 EDT [4915] STATEMENT:  sql = 'GRANT CREATE ON DATABASE crime_project TO crimeuser
+2022-06-20 17:52:56.823 EDT [4931] ERROR:  syntax error at or near "sql" at character 1
+2022-06-20 17:52:56.823 EDT [4931] STATEMENT:  sql = 'GRANT ALL PRIVILEGES ON crime_project TO crimeuser;
+2022-06-20 17:55:03.879 EDT [4944] ERROR:  relation "crime_project" does not exist
+2022-06-20 17:55:03.879 EDT [4944] STATEMENT:  GRANT ALL PRIVILEGES ON crime_project TO crimeuser;
+2022-06-20 17:55:21.816 EDT [4946] ERROR:  permission denied for database crime_project
+2022-06-20 17:55:21.816 EDT [4946] STATEMENT:  CREATE schema nibrs
+2022-06-20 17:55:35.431 EDT [4949] ERROR:  database "crime_project" already exists
+2022-06-20 17:55:35.431 EDT [4949] STATEMENT:  CREATE database crime_project
