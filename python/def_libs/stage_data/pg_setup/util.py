@@ -1,3 +1,5 @@
+import psycopg2
+
 def default_cxn():
     return {'db': 'postgres',
             'user': 'danfinkel',
@@ -20,3 +22,29 @@ def conn_string():
                                                       user=cxn['user'],
                                                       password=cxn['password'],
                                                       host=cxn['host'])
+def submit_sql(cxn, sql):
+    """
+    one off sql execution via psycopg2
+    """
+
+    conn = psycopg2.connect(
+                 database= cxn['db'],
+                 user= cxn['user'],
+                 password= cxn['password'],
+                 host= cxn['host'],
+                 port= cxn['port']
+            )
+    conn.autocommit = True
+
+    #Creating a cursor object using the cursor() method
+    cursor = conn.cursor()
+
+    try:
+        cursor.execute(sql)
+        print('sql executed')
+    except Exception as e:
+        print('sql did not execute')
+        print(e)
+        conn.close()
+
+    conn.close()
