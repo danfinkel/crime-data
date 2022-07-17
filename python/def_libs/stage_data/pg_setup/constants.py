@@ -5,7 +5,7 @@
 #  original column name
 #  original column description
 #  postgres column name
-DB_COLS = [
+INCIDENT_COLS = [
     ["INCNUM", "INCIDENT NUMBER", 'incident_number'],
     ["INCDATE", "INCIDENT DATE", 'incident_date'],
     # BH1 - Batch Header 1
@@ -32,3 +32,9 @@ DB_COLS = [
     ["V40221", "RESIDENT STATUS OF VICTIM - 1 137", 'residency_vicitm'],
     ["V40261", "TYPE INJURY 1 - 1", 'injury_type']
     ]
+
+CENSUS_VARS = {
+ pop_by_gender_age: {'name': 'total_pop',
+                     'concept': 'SEX BY AGE',
+                     'label':  'Estimate!!Total'}
+}

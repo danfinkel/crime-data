@@ -139,3 +139,11 @@
 2022-07-02 20:49:05.406 EDT [6098] ERROR:  column a.b1007 does not exist at character 50
 2022-07-02 20:49:05.406 EDT [6098] HINT:  Perhaps you meant to reference the column "a.B1007".
 2022-07-02 20:49:05.406 EDT [6098] STATEMENT:  select count(*) from nibrs.incidents2010 a where a.B1007 = 'DEDHAM';
+2022-07-06 18:22:46.180 EDT [6098] ERROR:  table "incident2010" does not exist
+2022-07-06 18:22:46.180 EDT [6098] STATEMENT:  drop table nibrs.incident2010;
+2022-07-06 18:23:10.822 EDT [24929] ERROR:  table "incidents" does not exist
+2022-07-06 18:23:10.822 EDT [24929] STATEMENT:  DROP TABLE nibrs.incidents;
+2022-07-06 18:33:19.673 EDT [25457] FATAL:  lock file "postmaster.pid" already exists
+2022-07-06 18:33:19.673 EDT [25457] HINT:  Is another postmaster (PID 3746) running in data directory "/Users/danfinkel/.postgres"?
+2022-07-06 18:33:53.541 EDT [25714] FATAL:  lock file "postmaster.pid" already exists
+2022-07-06 18:33:53.541 EDT [25714] HINT:  Is another postmaster (PID 3746) running in data directory "/Users/danfinkel/.postgres"?

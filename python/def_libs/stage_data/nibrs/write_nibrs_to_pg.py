@@ -1,12 +1,9 @@
 # move nibrs data from raw into postgres
 
 # Nibrs Data Citation
-# Kaplan, Jacob.
-# Jacob Kaplan’s Concatenated Files: National Incident-Based Reporting System (NIBRS) Data,
-# 1991-2020. Ann Arbor,
-# MI: Inter-university Consortium for Political and Social Research [distributor],
-# 2022-05-09. https://doi.org/10.3886/E118281V5
-# see: https://www.openicpsr.org/openicpsr/project/118281/version/V5/view?path=/openicpsr/118281/fcr:versions/V5&type=project
+# 2010: https://www.icpsr.umich.edu/web/NACJD/studies/33601
+# 2011: https://www.icpsr.umich.edu/web/NACJD/studies/34603
+
 
 import psycopg2
 import pandas as pd
@@ -14,12 +11,18 @@ from sqlalchemy import create_engine
 import os
 
 from def_libs.stage_data.pg_setup.util import conn_string, submit_sql, crimeuser_cxn
-from def_libs.stage_data.pg_setup.constants import DB_COLS
+from def_libs.stage_data.pg_setup.constants import INCIDENT_COLS
 
 class nibrs_pg():
-    def __init__(self, fpath, table_name):
+    def __init__(self, fpath, table_name, overwrite_table):
+        """
+            fpath : path to the files (reads everyting in folder)
+            table_name : table where data is headed
+            overwrite_table : T/F to overwrite or append table
+        """
         self.fpath = fpath
         self.table_name = table_name
+        self.overwrite_table = overwrite_table
 
         self.conn_string = conn_string()
 
@@ -44,12 +47,18 @@ class nibrs_pg():
         submit_sql(crimeuser_cxn(), sql)
 
     def prune_frame(self, df):
-        cols = [c[0] for c in DB_COLS]
+
+        # prune and rename columns
+        cols = [c[0] for c in INCIDENT_COLS]
+        df_out = df[cols]
+        df_out.columns = [c[2] for c in INCIDENT_COLS]
+
         return df[cols]
 
     def build_table(self):
 
-        self.drop_table()
+        if self.overwrite_table:
+            self.drop_table()
 
         stata_files = self.get_stata_files()
 
